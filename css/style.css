@@ -1,0 +1,181 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: hsl(0, 5%, 92%);
+    word-break: break-word;
+}
+.header {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons__button {
+    background: transparent;
+    color: teal;
+    border: none;
+    margin: 0 0 0 20px;
+    transition: color 0.4s;
+}
+
+@media(max-width: 767px) {
+    .buttons__button {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
+
+.buttons__button:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.buttons__button:disabled {
+    color: #ccc;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    
+}
+    @media(max-width: 767px) {
+        .form {
+            grid-template-columns: 1fr;
+        }
+
+}
+
+.form__input {
+    border: solid 2px hsl(0, 5%, 92%);
+    padding: 10px;
+}
+
+.form__button {
+    background-color: hsl(180, 100%, 25%);
+    color: white;
+    padding: 10px;
+    border-style: none;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+    transform: scale(1.1);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 35%);
+}
+
+.section {
+    margin: 10px 0;
+    background-color: white;
+    box-shadow: 0 0 5px #ddd;
+    
+}
+
+.section__body {
+    padding: 20px;
+}
+
+.section__title {
+    font-size: 20px;
+    margin: 0;
+}
+
+.section__header {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media(max-width: 767px) {
+    .section__header {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tasksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ .tasksList__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    grid-gap: 10px;
+    border-bottom: solid 1px #e5e2e2;
+    padding: 15px;
+ }
+ 
+ .tasksList__item--hidden {
+    display: none;
+ }
+ 
+ .tasksList__button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: white;
+    transition: 0.5s;
+ }
+ 
+ .tasksList__button--done {
+    background-color: hsl(120, 100%, 25%);
+ }
+ 
+ .tasksList__button--done:hover {
+    background-color: hsl(120, 100%, 32%);
+ }
+ 
+ .tasksList__button--done:active {
+    background-color: hsl(120, 100%, 35%);
+ }
+ 
+ .tasksList__button--remove {
+    background-color: hsl(0, 100%, 50%);
+ }
+ 
+ .tasksList__button--remove:hover {
+    background-color: hsl(0, 100%, 65%);
+ }
+ 
+ .tasksList__button--remove:active {
+    background-color: hsl(0, 100%, 70%);
+ }
+ 
+ .tasksList__content {
+    font-size: 15px;
+ }
+ 
+ .tasksList__content--done {
+    text-decoration: line-through;
+ }
